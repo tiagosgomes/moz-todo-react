@@ -24,7 +24,8 @@ function App(props) {
   }
 
   function deleteTask(id) {
-    console.log(id);
+    const remainingTasks = tasks.filter((task) => id !== task.id);
+    setTasks(remainingTasks);
   }
 
   const taskList = tasks?.map((task) => (
@@ -39,7 +40,7 @@ function App(props) {
     />
   ));
 
-  const tasksNoun = taskList.length !== 1 ? "tasks" : "task";
+  const tasksNoun = taskList.length > 1 ? "tasks" : "task";
   const headingText = `${taskList.length} ${tasksNoun} remaining`;
 
   return (
