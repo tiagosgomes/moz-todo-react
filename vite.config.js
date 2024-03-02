@@ -6,5 +6,4 @@ export default defineConfig({
   plugins: [react()],
 })
 
-base: '/moz-todo-react/',
-build: {outDir: 'build'}
+base: '/moz-todo-react/'
